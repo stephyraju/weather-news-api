@@ -1,0 +1,8 @@
+// http://ionicframework.com/docs/theming/
+
+// App Global
+.page-container{
+    background-color:color($colors, secondary);
+    color:color($colors, light);
+    margin-top: 30px;
+}

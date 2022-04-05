@@ -1,0 +1,42 @@
+<!-- App Settings Page -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<!---Sett City-->
+        <form (ngSubmit)="saveForm()" name="Form"></form>
+        <ion-item>
+          <ion-label fixed>
+            City:
+          </ion-label>
+          <ion-input [(ngModel)]="cityName" name="city" type="text"placeholder="Enter City" required></ion-input>
+        </ion-item>
+  <!------>
+    <h4>Settings</h4>
+      <!--List for the radio buttons Group-->
+      <!-- Store the value checked on the "unit" key of the Sett Object -->
+      <ion-list radio-group [(ngModel)]="units">
+        <ion-list-header>
+         Set Units:
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Scientific</ion-label>
+          <ion-radio value="S"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Metric</ion-label>
+          <ion-radio checked ="true" value="M"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fahrenheit</ion-label>
+          <ion-radio value="I"></ion-radio>
+        </ion-item>
+      <br>
+      <br>
+      <!--Button for Submit Form-->
+      <button class="ion-margin-top" ion-button type="submit" (click)="saveSettings()">Save</button>
+    </ion-list>
+</ion-content>
